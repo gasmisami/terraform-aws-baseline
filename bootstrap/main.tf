@@ -29,6 +29,8 @@ resource "random_string" "suffix" {
   upper   = false
 }
 
+
+
 resource "aws_s3_bucket" "tfstate" {
   bucket = "tfstate-baseline-${random_string.suffix.result}"
 }
